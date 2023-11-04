@@ -22,9 +22,11 @@ Minikube version; kubectl version
 ### Clone this repository
 
 ### Switch to a user in the docker group and change ownership of directory
-`useradd -d /home/<username> -G docker <username>`
-`sudo -u <username> -s` 
-`chown -R $USER:$(id -g) <repo dir> && cd <repo dir>`
+1. `useradd -d /home/<username> -G docker <username>`
+
+2. `sudo -u <username> -s` 
+
+3. `chown -R $USER:$(id -g) <repo dir> && cd <repo dir>`
 
 ### Configure and start kubernetes cluster with minikube on single node
 ```minikube start --driver=docker```
