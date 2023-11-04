@@ -22,12 +22,12 @@ Minikube version; kubectl version
 ### Clone this repository
 
 ### Switch to a user in the docker group and change ownership of directory
-```useradd -d /home/<username> -G docker <username>```
-```sudo -u <username> -s``` 
-```chown -R $USER:$(id -g) <repo dir> && cd <repo dir>``` 
+`useradd -d /home/<username> -G docker <username>`
+`sudo -u <username> -s` 
+`chown -R $USER:$(id -g) <repo dir> && cd <repo dir>`
 
 ### Configure and start kubernetes cluster with minikube on single node
-```minikube start –driver=docker```
+```minikube start --driver=docker```
 
 ### Create deployments/service, secret, configmap
 ```kubectl apply -f $(pwd)```
@@ -35,7 +35,7 @@ Minikube version; kubectl version
 ### Create and assign external ip addr to external service
 ```minikube service <service name>```
 
-### Now access mongo express app at the given url in command line and use admin:<pass> combination (can be found in mongo-express deployment log
+### Now access mongo express app at the given url in command line and use admin:<pass> combination (can be found in mongo-express deployment log)
 ![mongo express web ui](./mongo_express_webui)
 
 ## Monitoring status of cluster
